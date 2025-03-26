@@ -1,3 +1,160 @@
 body {
-	background-color: ;
+  background-color: whitesmoke;
+  font-family: Cinzel Decorative, serif;
+  margin-top: 3rem;
+  margin-top: 3rem;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* header 
+ ******************************************************************************/
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+header > img {
+  width: 90%;
+}
+
+/* navbar - 1 x 3 grid
+ ******************************************************************************/
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: lightslategray;
+  justify-content: center;
+  align-items: center;
+}
+
+.navlist {
+  grid-column: 2;
+
+  display: flex;
+  align-self: center;
+
+  list-style: none;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.navitem {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.navitem > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  transition: color 0.5s ease-in-out 0;
+}
+
+.navitem > a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Navbar Search
+ ******************************************************************************/
+.nav-search {
+  grid-column: 3;
+  display: flex;
+  justify-content: right;
+  margin-right: 5%;
+}
+
+.nav-search-btn {
+  transition: color 0.2s ease-in-out 0s;
+  transition: text-shadow 0.5s ease-in-out 0s;
+}
+
+.nav-search-btn:hover {
+  cursor: pointer;
+  color: lightblue;
+  text-shadow: 0 0 0 #333;
+}
+
+.nav-search-input {
+  margin-left: 1.1em;
+  border: none;
+}
+
+.nav-search-input:focus {
+  border: none;
+}
+
+/* Main Promotion section
+ ******************************************************************************/
+main {
+  margin-top: 1.2rem;
+  padding: 9rem 9rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0fr;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.promotion {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.promotion > img {
+  max-width: 80vw;
+}
+
+/* Smaller viewport
+ ******************************************************************************/
+@media (max-width: 760px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .navlist {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .nav-search {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+/* Google Cinzel Font Styling 
+ ******************************************************************************/
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
 }
